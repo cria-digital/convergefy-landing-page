@@ -12,12 +12,23 @@ export const theme = extendTheme({
       variants: {
         primary: {
           p: "16px",
+          fontSize: "18px",
           lineHeight: "24px",
+          height: "56px",
           fontWeight: 700,
           bg: "#3CA318",
           color: "#FFFFFF",
           borderRadius: "8px",
           border: "none",
+        },
+        secondary: {
+          fontSize: "18px",
+          color: "#0C214D",
+          bg: "none",
+          p: "16px",
+          lineHeight: "24px",
+          height: "56px",
+          fontWeight: 700,
         },
       },
     },

@@ -1,9 +1,11 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import HomeSplitScreen from "../components/Header";
+import WithSubnavigation from "../components/Navbar";
 
 export function Home() {
   return (
-    <Flex height="100vh" justify="center" align="center">
-      <Heading>Hi</Heading>
-    </Flex>
+   <>
+   <WithSubnavigation />
+   <HomeSplitScreen />
+   </>
   );
 }
