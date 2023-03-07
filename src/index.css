@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+@font-face {
+  font-family: 'Circular Std';
+  src: local("CircularStd-Medium"), local("Circular-Std-Black"),
+    url("../public/fonts/CircularStd/CircularStd-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* @font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"), local("Circular-Std-Black"),
+    url("../public/fonts/CircularStd/Gilroy-Bold.ttf") format("truetype");
+  font-style: normal;
+} */
+
+
+body {
+  margin: 0;
+  font-family: 'Circular Std', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

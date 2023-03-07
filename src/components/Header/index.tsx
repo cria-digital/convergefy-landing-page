@@ -1,4 +1,12 @@
-import { Button, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import {
   headerImage,
   headerWaves,
@@ -14,8 +22,9 @@ export default function HomeSplitScreen() {
       height={"calc(100vh - 94px)"}
       direction={{ base: "column", md: "row" }}
       bgColor="black.100"
-      pr="130px"
+      // pr="130px"
       pos="relative"
+      px="60px"
     >
       <Image
         src={headerEllipseSecondary}
@@ -53,14 +62,14 @@ export default function HomeSplitScreen() {
         transform="rotate(10.7deg)"
         zIndex={2}
       />
-      <Flex p={8} flex={1} justify={"center"} pt="278px">
+      <Flex flex={1} align="center" pr="20px">
         <Stack
           spacing={6}
-          w={"full"}
-          maxW={"685px"}
           color="white"
           pos="relative"
           zIndex={5}
+          height="412px"
+          pt="40px"
         >
           <Heading fontSize="72px" lineHeight="80px">
             The quick brown fox jumps over the dog
@@ -69,7 +78,7 @@ export default function HomeSplitScreen() {
             fontSize="24px"
             lineHeight="36px"
             opacity={0.6}
-            fontWeight={"normal"}
+            fontWeight={450}
           >
             Lorem ipsum dolor sit amet, consectetur dolor sit amet adipiscing
             elit. Vestibulum vel leo neque.
@@ -101,5 +110,3 @@ export default function HomeSplitScreen() {
     </Stack>
   );
 }
-
-

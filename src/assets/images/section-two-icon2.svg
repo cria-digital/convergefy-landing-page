@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.2" cx="32" cy="32" r="24" fill="#5D27F8"/>
+<path d="M40 34C41.1046 34 42 33.1046 42 32C42 30.8954 41.1046 30 40 30C38.8954 30 38 30.8954 38 32C38 33.1046 38.8954 34 40 34Z" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 26C41.1046 26 42 25.1046 42 24C42 22.8954 41.1046 22 40 22C38.8954 22 38 22.8954 38 24C38 25.1046 38.8954 26 40 26Z" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 42C41.1046 42 42 41.1046 42 40C42 38.8954 41.1046 38 40 38C38.8954 38 38 38.8954 38 40C38 41.1046 38.8954 42 40 42Z" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 34C25.1046 34 26 33.1046 26 32C26 30.8954 25.1046 30 24 30C22.8954 30 22 30.8954 22 32C22 33.1046 22.8954 34 24 34Z" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 32H38" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38 24H34C32 24 31 25 31 27V37C31 39 32 40 34 40H38" stroke="#291070" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
