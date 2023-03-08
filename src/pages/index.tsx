@@ -13,7 +13,7 @@ export function Home() {
         <HomeSplitScreen />
         <Functionalities />
         <Tranquilize />
-        <Features />
+        {/* <Features /> */}
       </Box>
     </>
   );
