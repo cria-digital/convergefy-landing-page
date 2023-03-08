@@ -14,6 +14,7 @@ import iconFunctionalities5 from "./section-two-icon8.svg";
 import iconFunctionalities6 from "./section-two-icon9.svg";
 import checkIcon from "./tick-circle.svg";
 import network from "./network.svg";
+import controlSectionTables from './control-section-tables.svg'
 
 export {
   convergefyLogo,
@@ -32,4 +33,5 @@ export {
   iconFunctionalities6,
   checkIcon,
   network,
+  controlSectionTables
 };

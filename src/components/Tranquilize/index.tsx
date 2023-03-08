@@ -51,12 +51,11 @@ const channelsSecondRow = [
 
 export default function Tranquilize() {
   return (
-    <Box maxW="100vw" overflow={"hidden"} bgColor="white" pb="20px">
+    <Container maxW={"8xl"}>
       <Stack
         direction={{ base: "column", md: "row" }}
         // p="0px 160px"
         width="90%"
-        mx="auto"
         overflow={"hidden"}
         spacing="24px"
         color="black.100"
@@ -126,6 +125,6 @@ export default function Tranquilize() {
           />
         </Flex>
       </Stack>
-    </Box>
+    </Container>
   );
 }
