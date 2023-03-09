@@ -51,16 +51,14 @@ const channelsSecondRow = [
 
 export default function Tranquilize() {
   return (
-    <Container maxW={"8xl"}>
+    <Box as={Container} maxW="8xl">
       <Stack
         direction={{ base: "column", md: "row" }}
-        // p="0px 160px"
-        width="90%"
-        overflow={"hidden"}
         spacing="24px"
         color="black.100"
         bgColor="white"
         height="836.14px"
+        maxH="836.14px"
       >
         <Flex flex={1} flexDir={"column"} py="148px" width={"50%"}>
           <Text
@@ -121,10 +119,10 @@ export default function Tranquilize() {
             src={network}
             alt="Social network"
             pos="absolute"
-            top="-70px"
+            // top="-70px"
           />
         </Flex>
       </Stack>
-    </Container>
+    </Box>
   );
 }

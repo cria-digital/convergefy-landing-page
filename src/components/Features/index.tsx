@@ -15,16 +15,14 @@ import { controlSectionTables } from "../../assets/images";
 
 export default function Features() {
   return (
-    <Container maxW={"8xl"}>
+    <Container maxW={"8xl"} p={0}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py="140px"
-        // px={['20px', '60px']}
         direction={{ base: "column", md: "row" }}
       >
-        <Box flex={1} width="50%"
-        >
+        <Box flex={1} width="50%">
           <Image src={controlSectionTables} alt="" />
         </Box>
 

@@ -85,12 +85,11 @@ const featuresSecondColumn = [
 
 export default function Functionalities() {
   return (
-    <Container maxW={"full"} bgColor="white">
+    <Box as={Container} maxW="8xl" pt="127px" pb="130px">
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
-        px={["20px", "60px"]}
         direction={{ base: "column", md: "row" }}
       >
         <Box flex={1}>
@@ -143,7 +142,7 @@ export default function Functionalities() {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
-            pt='54px'
+            pt="54px"
           >
             <Button variant="secondary" color="blue" width="172px">
               Agendar reunião
@@ -217,7 +216,7 @@ export default function Functionalities() {
           </Flex>
         </Flex>
       </Stack>
-    </Container>
+    </Box>
   );
 }
 
