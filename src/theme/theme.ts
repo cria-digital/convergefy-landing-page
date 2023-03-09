@@ -8,6 +8,11 @@ export const theme = extendTheme({
         margin: 0,
       },
     },
+    Text: {
+      baseStyle: {
+        lineHeight: "28px",
+      },
+    },
     Button: {
       variants: {
         primary: {

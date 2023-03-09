@@ -3,6 +3,8 @@ import Features from "../components/Features";
 import Functionalities from "../components/Functionalities";
 import HomeSplitScreen from "../components/Header";
 import WithSubnavigation from "../components/Navbar";
+import Pricing from "../components/Pricing";
+import Scheduling from "../components/Scheduling";
 import Tranquilize from "../components/Tranquilize";
 
 export function Home() {
@@ -14,6 +16,8 @@ export function Home() {
         <Functionalities />
         <Tranquilize />
         <Features />
+        <Scheduling />
+        <Pricing />
       </Box>
     </>
   );
