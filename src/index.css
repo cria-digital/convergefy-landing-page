@@ -1,7 +1,7 @@
-@import url('https://fonts.cdnfonts.com/css/circular-std');
+@import url("https://fonts.cdnfonts.com/css/circular-std");
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   src: local("CircularStd-Medium"), local("Circular-Std-Black"),
     url("../public/fonts/CircularStd/CircularStd-Medium.ttf") format("truetype");
   font-style: normal;
@@ -9,17 +9,64 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"), local("Circular-Std-Black"),
-    url("../public/fonts/CircularStd/Gilroy-Bold.ttf") format("truetype");
-  font-style: normal;
-} */
+:root {
+  --titleFontSize: 38px;
+  --titleLineHeight: 1.263157895;
+  --titleLetterSpacing: -0.2px;
+  --fontWeightBold: 500;
+  --fontWeightNormal: 300;
+  --bodyFontSize: 18px;
+  --titleWeight: var(--fontWeightBold);
+  --bodyLineHeight: 1.555555556;
 
+  --titleFont: var(--titleWeight) var(--titleFontSize) / var(--titleLineHeight);
+  --bodyFont: var(--fontWeightNormal) var(--bodyFontSize, 18px) /
+    var(--bodyLineHeight, 1.555555556) var(--fontFamily);
+}
 
 body {
   margin: 0;
-  font-family: 'Circular Std', sans-serif;
+  font-family: "Circular Std", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.Section__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  min-height: var(--sectionMinHeight);
+  max-width: 1080px;
+}
+.windowWidth {
+  max-width: 1080px;
+}
+
+p {
+  font: var(--bodyFont);
+}
+
+@media screen and (max-width: 1290px) {
+  .header-title {
+    font-size: 56px !important;
+    line-height: 1.263157895;
+  }
+  .title {
+    font-size: 38px !important;
+    line-height: 1.263157895 !important;
+  }
+  .testimonal-text {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .larger {
+    max-width: 1400px !important;
+  }
+  .header-carrousel {
+    max-width: 1500px !important;
+  }
 }

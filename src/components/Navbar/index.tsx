@@ -12,7 +12,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
+  Container,
   useDisclosure,
   Image,
 } from "@chakra-ui/react";
@@ -28,16 +28,15 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box as={Container} boxShadow="0px 0px 14px rgba(0, 0, 0, 0.08)"
+    className="larger"
+    >
       <Flex
         bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
         height="94px"
         minH={"90px"}
         py={[2, "19px"]}
-        px={[4, "160px"]}
-        borderBottom={'1px solid #F9F9F9'}
-       
+        borderBottom={"1px solid #F9F9F9"}
         align={"center"}
       >
         <Flex

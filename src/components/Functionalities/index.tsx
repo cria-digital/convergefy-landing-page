@@ -85,14 +85,13 @@ const featuresSecondColumn = [
 
 export default function Functionalities() {
   return (
-    <Box as={Container} maxW="8xl" pt="127px" pb="130px">
+    <Box as={Container} pt="56px" pb="130px" className="larger">
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
         direction={{ base: "column", md: "row" }}
       >
-        <Box flex={1}>
+        <Box flex={1} pt="148px">
           <Text
             color="blue.100"
             fontWeight={700}
@@ -103,17 +102,16 @@ export default function Functionalities() {
           </Text>
 
           <Heading
+            className="title"
             lineHeight="60px"
             fontWeight={600}
             as="h2"
             mb="24px"
             fontSize={"48px"}
           >
-            Temos diversas funcionalidades
-            <br />
-            para facilitar a sua gestão
+            Temos diversas funcionalidades para facilitar a sua gestão
           </Heading>
-          <Text opacity={0.6} fontSize={"24px"} lineHeight="40px">
+          <Text opacity={0.6} fontSize={"18px"} lineHeight="40px">
             Conheça os benefícios que a convergefy oferece.
           </Text>
           <Stack spacing="32px" mt="64px" color="black">
@@ -142,9 +140,9 @@ export default function Functionalities() {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
-            pt="54px"
+            pt="90px"
           >
-            <Button variant="secondary" color="blue" width="172px">
+            <Button variant="secondary" width="172px">
               Agendar reunião
             </Button>
             <Button
@@ -158,60 +156,26 @@ export default function Functionalities() {
           </Stack>
         </Box>
 
-        <Flex flex={1} gap="20px" width="50%" pt="92px">
+        <Flex flex={1} gap="16px" width="50%" pt="92px">
           <Flex width="385px" flexDir={"column"} gap="20px">
             {features.map((feature, index) => (
-              <Card
+              <FeatureCard
                 key={index}
-                height="244px"
-                bgColor="#F9F9F9"
-                border="2px solid #ECECEC"
-                borderRadius="16px"
-                p="24px 32px 32px"
-                boxShadow="none"
-              >
-                <CardHeader p={0} mb="16px">
-                  <Image src={feature.icon} alt="" />
-                </CardHeader>
-                <CardBody p={0} color="black.100">
-                  <Heading as="h3" fontSize="20px" lineHeight="40px" mb="12px">
-                    {" "}
-                    {feature.title}
-                  </Heading>
-
-                  <Text opacity={0.7} fontWeight={450} lineHeight="28px">
-                    {feature.text}
-                  </Text>
-                </CardBody>
-              </Card>
+                icon={feature.icon}
+                text={feature.text}
+                title={feature.title}
+              />
             ))}
           </Flex>
 
           <Flex width="385px" flexDir={"column"} gap="20px" mt="84px">
             {featuresSecondColumn.map((feature, index) => (
-              <Card
+              <FeatureCard
                 key={index}
-                height="244px"
-                bgColor="#F9F9F9"
-                border="2px solid #ECECEC"
-                borderRadius="16px"
-                p="24px 32px 32px"
-                boxShadow="none"
-              >
-                <CardHeader p={0} mb="16px">
-                  <Image src={feature.icon} alt="" />
-                </CardHeader>
-                <CardBody p={0} color="black.100">
-                  <Heading as="h3" fontSize="20px" lineHeight="40px" mb="12px">
-                    {" "}
-                    {feature.title}
-                  </Heading>
-
-                  <Text opacity={0.7} fontWeight={450} lineHeight="28px">
-                    {feature.text}
-                  </Text>
-                </CardBody>
-              </Card>
+                icon={feature.icon}
+                text={feature.text}
+                title={feature.title}
+              />
             ))}
           </Flex>
         </Flex>
@@ -220,21 +184,36 @@ export default function Functionalities() {
   );
 }
 
-export const Blob = (props: IconProps) => {
+type FeatureCardProps = {
+  icon: string;
+  title: string;
+  text: string;
+};
+
+const FeatureCard = ({ icon, text, title }: FeatureCardProps) => {
   return (
-    <Icon
-      width={"100%"}
-      viewBox="0 0 578 440"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
+    <Card
+      height="244px"
+      minW="300px"
+      bgColor="#F9F9F9"
+      border="2px solid #ECECEC"
+      borderRadius="16px"
+      p="20px 28px 28px"
+      boxShadow="none"
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M239.184 439.443c-55.13-5.419-110.241-21.365-151.074-58.767C42.307 338.722-7.478 282.729.938 221.217c8.433-61.644 78.896-91.048 126.871-130.712 34.337-28.388 70.198-51.348 112.004-66.78C282.34 8.024 325.382-3.369 370.518.904c54.019 5.115 112.774 10.886 150.881 49.482 39.916 40.427 49.421 100.753 53.385 157.402 4.13 59.015 11.255 128.44-30.444 170.44-41.383 41.683-111.6 19.106-169.213 30.663-46.68 9.364-88.56 35.21-135.943 30.551z"
-        fill="currentColor"
-      />
-    </Icon>
+      <CardHeader p={0} mb="10px">
+        <Image src={icon} alt="" />
+      </CardHeader>
+      <CardBody p={0} color="black.100">
+        <Heading as="h3" fontSize="19px" lineHeight="30px" mb="10px">
+          {" "}
+          {title}
+        </Heading>
+
+        <Text opacity={0.7} fontWeight={100} lineHeight="28px">
+          {text}
+        </Text>
+      </CardBody>
+    </Card>
   );
 };

@@ -26,6 +26,7 @@ import testimonialCard1 from "./testimonial-card1.svg";
 import testimonialCard2 from "./testimonial-card2.svg";
 import testimonialCard3 from "./testimonial-card3.svg";
 import logoFooter from './logo-footer.svg'
+import carrousel from './carrousel.svg'
 
 export {
   convergefyLogo,
@@ -55,5 +56,6 @@ export {
   testimonialCard1,
   testimonialCard2,
   testimonialCard3,
-  logoFooter
+  logoFooter,
+  carrousel
 };

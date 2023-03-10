@@ -31,10 +31,12 @@ interface FeatureProps {
 const Feature = ({ name, place, image }: FeatureProps) => {
   return (
     <Card
-      width="100%"
-      maxW="520px"
+      maxW={["520px"]}
       height="441px"
+      maxH="441px"
       backgroundImage={image}
+      backgroundRepeat="no-repeat"
+      backgroundPosition="center"
       filter="drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.12))"
       borderRadius="8px"
       pos="relative"
@@ -61,7 +63,13 @@ const Feature = ({ name, place, image }: FeatureProps) => {
 
 export default function Testimonials() {
   return (
-    <Box as={Container} maxW="8xl" pt="127px" pb="150px" overflow={"hidden"}>
+    <Box
+      as={Container}
+      pt="127px"
+      pb="150px"
+      overflow={"hidden"}
+      className="larger"
+    >
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -87,12 +95,13 @@ export default function Testimonials() {
                 fontSize="48px"
                 lineHeight="58px"
                 fontWeight="700"
+                className="title"
               >
                 O que nossos clientes estão falando até agora
               </Heading>
             </Box>
             <Flex gap="28px">
-              <Button variant="secondary" color="blue.100" width="172px">
+              <Button variant="secondary" width="172px">
                 Agendar reunião
               </Button>
               <Button variant="primary" bgColor={"#199017"} width="250px">
@@ -102,7 +111,12 @@ export default function Testimonials() {
           </VStack>
         </GridItem>
         <GridItem>
-          <Text fontSize="24px" lineHeight={"40px"} opacity={0.6}>
+          <Text
+            fontSize="24px"
+            lineHeight={"40px"}
+            opacity={0.6}
+            className="testimonal-text"
+          >
             Quisque quis orci quis tellus ultricies aliquam vitae et augue.
             Donec nulla ipsum, ultrices a semper ac, bibendum in orci. Curabitur
             posuere sem a massa luctus, ac tincidunt nisl varius. Proin tempus
@@ -115,30 +129,27 @@ export default function Testimonials() {
         </GridItem>
       </Grid>
 
-      <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} gap="20px">
-        <GridItem colSpan={1}>
-          <Feature
-            name={"Rodrigo Loren"}
-            place={"Nubank"}
-            image={testimonialCard1}
-          />
-        </GridItem>
+      <Grid
+        templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)", "repeat(3, 1fr)"]}
+        gap="20px"
+      >
+        <Feature
+          name={"Rodrigo Loren"}
+          place={"Nubank"}
+          image={testimonialCard1}
+        />
 
-        <GridItem colSpan={1}>
-          <Feature
-            name={"Angela Silva"}
-            place={"Gerente de comunicações"}
-            image={testimonialCard2}
-          />
-        </GridItem>
+        <Feature
+          name={"Angela Silva"}
+          place={"Gerente de comunicações"}
+          image={testimonialCard3}
+        />
 
-        <GridItem colSpan={1}>
-          <Feature
-            name={"Rodolfo Loren"}
-            place={"Analista de call center"}
-            image={testimonialCard3}
-          />
-        </GridItem>
+        <Feature
+          name={"Rodolfo Loren"}
+          place={"Analista de call center"}
+          image={testimonialCard2}
+        />
       </Grid>
     </Box>
   );

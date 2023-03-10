@@ -51,7 +51,9 @@ const channelsSecondRow = [
 
 export default function Tranquilize() {
   return (
-    <Box as={Container} maxW="8xl">
+    <Box as={Container}
+    className='larger'
+    >
       <Stack
         direction={{ base: "column", md: "row" }}
         spacing="24px"
@@ -69,7 +71,9 @@ export default function Tranquilize() {
           >
             TRANQUILIZE-SE
           </Text>
-          <Heading fontSize={"48px"} lineHeight="60px" as="h2" mb="16px">
+          <Heading fontSize={"48px"} lineHeight="60px" as="h2" mb="16px"
+           className='title'
+          >
             Integre todos os seus canais de atendimento
           </Heading>
 
@@ -101,7 +105,7 @@ export default function Tranquilize() {
             </Flex>
           </Stack>
           <Flex direction={{ base: "column", md: "row" }} pt="48px" gap="28px">
-            <Button variant="secondary" color="blue" width="172px">
+            <Button variant="secondary" width="172px">
               Agendar reunião
             </Button>
             <Button

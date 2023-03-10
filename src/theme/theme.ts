@@ -1,7 +1,27 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const breakpoints = {
+  sm: "375px",
+  md: "600px",
+  lg: "1112px",
+  xl: "1300px",
+  // '2xl': '96em',
+};
+
 export const theme = extendTheme({
+  breakpoints,
   components: {
+    Container: {
+      baseStyle: {
+        maxWidth: "1111px",
+        padding: 0,
+      },
+      sizes: {
+        lg: {
+          maxWidth: "1400px",
+        },
+      },
+    },
     FormLabel: {
       baseStyle: {
         fontWeight: "400",
@@ -28,7 +48,7 @@ export const theme = extendTheme({
         },
         secondary: {
           fontSize: "18px",
-          color: "#0C214D",
+          color: "#276CF8",
           bg: "none",
           p: "16px",
           lineHeight: "24px",

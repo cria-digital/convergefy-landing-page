@@ -15,7 +15,9 @@ import { controlSectionTables } from "../../assets/images";
 
 export default function Features() {
   return (
-    <Container maxW={"8xl"} p={0}>
+    <Container
+    className='larger'
+    >
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -42,6 +44,7 @@ export default function Features() {
             as="h2"
             mb="16px"
             fontSize={"48px"}
+            className='title'
           >
             Integre todos os seus canais de atendimento
           </Heading>
@@ -54,7 +57,7 @@ export default function Features() {
             direction={{ base: "column", sm: "row" }}
             pt="54px"
           >
-            <Button variant="secondary" color="blue" width="172px">
+            <Button variant="secondary" width="172px">
               Agendar reunião
             </Button>
             <Button

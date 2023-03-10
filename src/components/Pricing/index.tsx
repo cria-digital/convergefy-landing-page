@@ -15,6 +15,7 @@ import {
   Flex,
   FormLabel,
   Input,
+  Container,
 } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import {
@@ -145,8 +146,10 @@ function PriceWrapper({ name, image, price, starsAmount }: PriceWrapperProps) {
 
 export default function Pricing() {
   return (
-    <Box py={12}>
-      <VStack spacing={2} textAlign="center">
+    <Box as={Container} className="larger" py="160px">
+      <VStack spacing={2} textAlign="center"
+      mb='160px'
+      >
         <Text
           fontSize="lg"
           color={"blue.100"}
@@ -161,7 +164,8 @@ export default function Pricing() {
           fontSize="48px"
           lineHeight="58px"
           color="black.100"
-          maxW="5xl"
+          maxW="4xl"
+          className="title"
         >
           Preparamos com carinho diversas formas de atender o seu negócio
         </Heading>
@@ -171,7 +175,6 @@ export default function Pricing() {
         textAlign="center"
         justify="center"
         spacing={[4, "20px"]}
-        py="164px"
       >
         <PriceWrapper
           name="Iniciante"
