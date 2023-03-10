@@ -8,6 +8,7 @@ import HomeSplitScreen from "../components/Header";
 import WithSubnavigation from "../components/Navbar";
 import Pricing from "../components/Pricing";
 import Scheduling from "../components/Scheduling";
+import Solutions from "../components/Solutions";
 import Testimonials from "../components/Testimonials";
 import Tranquilize from "../components/Tranquilize";
 
@@ -46,6 +47,7 @@ export function Home() {
         <Testimonials />
         <Scheduling />
         <Pricing />
+        <Solutions />
         <Footer />
       </Box>
     </>

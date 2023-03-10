@@ -6,12 +6,14 @@ import {
   Stack,
   Text,
   Flex,
-  Tag,
   useColorModeValue,
   Image,
+  chakra,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { logoFooter } from "../../assets/images";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 type ListItemProps = {
   label: string;
@@ -48,6 +50,37 @@ const ListItem = ({ label, href }: ListItemProps) => {
   );
 };
 
+const SocialButton = ({
+  children,
+  label,
+  href,
+}: {
+  children: ReactNode;
+  label: string;
+  href: string;
+}) => {
+  return (
+    <chakra.button
+      bg='none'
+      rounded={"full"}
+      h={"32px"}
+      cursor={"pointer"}
+      as={"a"}
+      href={href}
+      display={"inline-flex"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      transition={"background 0.3s ease"}
+      _hover={{
+        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+      }}
+    >
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
+  );
+};
+
 export default function Footer() {
   return (
     <Box bg="#152231" color="white">
@@ -75,9 +108,26 @@ export default function Footer() {
                 height={"2px"}
                 bgColor={"#C6D7F8"}
               />
-              {listItem.items.map((item, index) => (
-                <ListItem label={item.label} href={item.href} key={index} />
-              ))}
+              {i !== 1 ? (
+                listItem.items.map((item, index) => (
+                  <ListItem label={item.label} href={item.href} key={index} />
+                ))
+              ) : (
+                <Stack direction={"row"} spacing={6}>
+                  <SocialButton label={"Facebook"} href={"#"}>
+                    <FaFacebookF />
+                  </SocialButton>
+                  <SocialButton label={"Instagram"} href={"#"}>
+                    <FaInstagram />
+                  </SocialButton>
+                  <SocialButton label={"Twitter"} href={"#"}>
+                    <FaTwitter />
+                  </SocialButton>
+                  <SocialButton label={"YouTube"} href={"#"}>
+                    <FaYoutube />
+                  </SocialButton>
+                </Stack>
+              )}
             </Box>
           ))}
 
