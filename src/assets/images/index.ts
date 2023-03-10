@@ -20,6 +20,7 @@ import planCard2 from "./plan2.svg";
 import planCard3 from "./plan3.svg";
 import pricesTable from "./prices-table.svg";
 import StarPrice from "./price-star.svg";
+import starPriceWhite from "./price-star-white.svg";
 import eyeIcon from "./eye.svg";
 import scheduling from "./scheduling.svg";
 import testimonialCard1 from "./testimonial-card1.svg";
@@ -27,6 +28,7 @@ import testimonialCard2 from "./testimonial-card2.svg";
 import testimonialCard3 from "./testimonial-card3.svg";
 import logoFooter from './logo-footer.svg'
 import carrousel from './carrousel.svg'
+import facilitiesDash from './facilities-dash.png'
 
 export {
   convergefyLogo,
@@ -57,5 +59,7 @@ export {
   testimonialCard2,
   testimonialCard3,
   logoFooter,
-  carrousel
+  carrousel,
+  facilitiesDash,
+  starPriceWhite
 };

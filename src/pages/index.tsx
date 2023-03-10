@@ -1,5 +1,6 @@
 import { Flex, Box, Container, Image } from "@chakra-ui/react";
 import { carrousel } from "../assets/images";
+import Facilities from "../components/Facilities";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Functionalities from "../components/Functionalities";
@@ -41,6 +42,7 @@ export function Home() {
         <Functionalities />
         <Tranquilize />
         <Features />
+        <Facilities />
         <Testimonials />
         <Scheduling />
         <Pricing />
