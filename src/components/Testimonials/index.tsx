@@ -62,7 +62,9 @@ const Feature = ({ name, place, image }: FeatureProps) => {
 };
 
 export default function Testimonials() {
+  
   return (
+    <Flex className='Section__container'>
     <Box
       as={Container}
       pt="127px"
@@ -152,5 +154,6 @@ export default function Testimonials() {
         />
       </Grid>
     </Box>
+    </Flex>
   );
 }

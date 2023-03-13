@@ -15,6 +15,7 @@ import { controlSectionTables } from "../../assets/images";
 
 export default function Features() {
   return (
+    <Flex className='Section__container'>
     <Container
     className='larger'
     >
@@ -72,6 +73,7 @@ export default function Features() {
         </Box>
       </Stack>
     </Container>
+    </Flex>
   );
 }
 

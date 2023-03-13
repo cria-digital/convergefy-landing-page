@@ -12,7 +12,12 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { logoFooter } from "../../assets/images";
+import {
+  logoFooter,
+  footerIcon1,
+  footerIcon2,
+  footerIcon3,
+} from "../../assets/images";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 type ListItemProps = {
@@ -24,7 +29,7 @@ type ListItemProps = {
 const ListItem = ({ label, href }: ListItemProps) => {
   return (
     <Flex
-      py="16px"
+      py="12px"
       as={Link}
       href={href ?? "#"}
       fontWeight="thin"
@@ -61,7 +66,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg='none'
+      bg="none"
       rounded={"full"}
       h={"32px"}
       cursor={"pointer"}
@@ -84,22 +89,63 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box bg="#152231" color="white">
-      <Container as={Stack} py={"124px"} className="larger">
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          {LIST_ITEMS.map((listItem, i) => (
-            <Box key={i}>
-              {listItem.heading === "" ? (
-                <Image src={logoFooter} alt="logo" />
-              ) : (
-                <Text
-                  color="white"
-                  fontWeight={700}
-                  fontSize={"20px"}
-                  lineHeight="32px"
-                >
-                  {listItem.heading}
-                </Text>
-              )}
+      <Flex className="Section__container">
+        <Container as={Stack} py={"50px"} className="larger">
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8} pt="70px">
+            {LIST_ITEMS.map((listItem, i) => (
+              <Box key={i}>
+                {listItem.heading === "" ? (
+                  <Image src={logoFooter} alt="logo" />
+                ) : (
+                  <Text
+                    color="white"
+                    fontWeight={700}
+                    fontSize={"20px"}
+                    lineHeight="32px"
+                  >
+                    {listItem.heading}
+                  </Text>
+                )}
+
+                <Box
+                  width="24px"
+                  mt="24px"
+                  mb="12px"
+                  height={"2px"}
+                  bgColor={"#C6D7F8"}
+                />
+                {i !== 1 ? (
+                  listItem.items.map((item, index) => (
+                    <ListItem label={item.label} href={item.href} key={index} />
+                  ))
+                ) : (
+                  <Stack direction={"row"} spacing={6}>
+                    <SocialButton label={"Facebook"} href={"#"}>
+                      <FaFacebookF />
+                    </SocialButton>
+                    <SocialButton label={"Instagram"} href={"#"}>
+                      <FaInstagram />
+                    </SocialButton>
+                    <SocialButton label={"Twitter"} href={"#"}>
+                      <FaTwitter />
+                    </SocialButton>
+                    <SocialButton label={"YouTube"} href={"#"}>
+                      <FaYoutube />
+                    </SocialButton>
+                  </Stack>
+                )}
+              </Box>
+            ))}
+
+            <Box>
+              <Text
+                color="white"
+                fontWeight={700}
+                fontSize={"20px"}
+                lineHeight="32px"
+              >
+                Informações de contato
+              </Text>
 
               <Box
                 width="24px"
@@ -108,45 +154,30 @@ export default function Footer() {
                 height={"2px"}
                 bgColor={"#C6D7F8"}
               />
-              {i !== 1 ? (
-                listItem.items.map((item, index) => (
-                  <ListItem label={item.label} href={item.href} key={index} />
-                ))
-              ) : (
-                <Stack direction={"row"} spacing={6}>
-                  <SocialButton label={"Facebook"} href={"#"}>
-                    <FaFacebookF />
-                  </SocialButton>
-                  <SocialButton label={"Instagram"} href={"#"}>
-                    <FaInstagram />
-                  </SocialButton>
-                  <SocialButton label={"Twitter"} href={"#"}>
-                    <FaTwitter />
-                  </SocialButton>
-                  <SocialButton label={"YouTube"} href={"#"}>
-                    <FaYoutube />
-                  </SocialButton>
-                </Stack>
-              )}
-            </Box>
-          ))}
 
-          {/* <Stack direction={"row"} align={"center"} spacing={2}>
-              <Link href={"#"}>Features</Link>
-              <Tag
-                size={"sm"}
-                bg={useColorModeValue("green.300", "green.800")}
-                ml={2}
-                color={"white"}
-              >
-                New
-              </Tag>
-            </Stack> */}
-        </SimpleGrid>
-        <Stack py={10} direction="row">
-          <Text>Todos os direitos reservados.</Text>
-        </Stack>
-      </Container>
+              <Flex height="28px" gap="18px">
+                <Image src={footerIcon1} alt="location" />
+
+                <Flex>
+                  <Text>Av, Loren ipson</Text>
+                  <Box
+                    minW="4px"
+                    w="4px"
+                    h="4px"
+                    bgColor={"#276CF8"}
+                    borderRadius={"full"}
+                  />
+                  <Text>Castilhos</Text>
+                  <Text>Castilhos</Text>
+                </Flex>
+              </Flex>
+            </Box>
+          </SimpleGrid>
+          <Stack py={0} direction="row">
+            <Text>Todos os direitos reservados.</Text>
+          </Stack>
+        </Container>
+      </Flex>
     </Box>
   );
 }
@@ -181,15 +212,6 @@ const LIST_ITEMS: ListItens[] = [
   },
   {
     heading: "Links Úteis",
-    items: [
-      { label: "Loren ipson loren", href: "#" },
-      { label: "Ipson loren", href: "#" },
-      { label: "Equipe", href: "#" },
-      { label: "Blog", href: "#" },
-    ],
-  },
-  {
-    heading: "Informações de contato",
     items: [
       { label: "Loren ipson loren", href: "#" },
       { label: "Ipson loren", href: "#" },

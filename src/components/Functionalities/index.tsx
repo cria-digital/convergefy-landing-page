@@ -85,7 +85,8 @@ const featuresSecondColumn = [
 
 export default function Functionalities() {
   return (
-    <Box as={Container} pt="56px" pb="130px" className="larger">
+    <Flex className='Section__container'>
+    <Box as={Container} className="larger">
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
@@ -181,6 +182,7 @@ export default function Functionalities() {
         </Flex>
       </Stack>
     </Box>
+    </Flex>
   );
 }
 

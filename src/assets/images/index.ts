@@ -26,9 +26,14 @@ import scheduling from "./scheduling.svg";
 import testimonialCard1 from "./testimonial-card1.svg";
 import testimonialCard2 from "./testimonial-card2.svg";
 import testimonialCard3 from "./testimonial-card3.svg";
-import logoFooter from './logo-footer.svg'
-import carrousel from './carrousel.svg'
-import facilitiesDash from './facilities-dash.png'
+import logoFooter from "./logo-footer.svg";
+import carrousel from "./carrousel.svg";
+import facilitiesDash from "./facilities-dash.png";
+import potencialSection from "./potencial-section.svg";
+import potencialSection2 from "./potencial-section2.svg";
+import footerIcon1 from './footer-icon1.svg'
+import footerIcon2 from './footer-icon2.svg'
+import footerIcon3 from './footer-icon3.svg'
 
 export {
   convergefyLogo,
@@ -61,5 +66,10 @@ export {
   logoFooter,
   carrousel,
   facilitiesDash,
-  starPriceWhite
+  starPriceWhite,
+  potencialSection,
+  potencialSection2,
+  footerIcon1,
+  footerIcon2,
+  footerIcon3
 };

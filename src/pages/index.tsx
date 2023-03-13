@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Functionalities from "../components/Functionalities";
 import HomeSplitScreen from "../components/Header";
 import WithSubnavigation from "../components/Navbar";
+import Potencial from "../components/Potencial";
 import Pricing from "../components/Pricing";
 import Scheduling from "../components/Scheduling";
 import Solutions from "../components/Solutions";
@@ -44,6 +45,7 @@ export function Home() {
         <Tranquilize />
         <Features />
         <Facilities />
+        <Potencial />
         <Testimonials />
         <Scheduling />
         <Pricing />

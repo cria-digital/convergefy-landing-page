@@ -18,6 +18,7 @@ import { facilitiesDash } from "../../assets/images";
 
 export default function Facilities() {
   return (
+    <Flex className='Section__container'>
     <Box as={Container} className="larger" maxH="727px">
       <Stack
         direction={{ base: "column", md: "row" }}
@@ -73,5 +74,6 @@ export default function Facilities() {
         </Flex>
       </Stack>
     </Box>
+    </Flex>
   );
 }

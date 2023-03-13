@@ -4,7 +4,7 @@ import {
   Container,
   Heading,
   Stack,
-  Image,
+  Flex,
   Accordion,
   AccordionButton,
   AccordionIcon,
@@ -59,6 +59,7 @@ const Item = ({ title, text }: FeatureProps) => {
 
 export default function Solutions() {
   return (
+    <Flex className='Section__container'>
     <Box as={Container} overflow={"hidden"} className="larger" pb="180px">
       <Stack
         align={"center"}
@@ -126,5 +127,6 @@ export default function Solutions() {
 
       </Accordion>
     </Box>
+    </Flex>
   );
 }

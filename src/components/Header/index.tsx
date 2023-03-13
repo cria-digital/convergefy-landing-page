@@ -17,12 +17,13 @@ import {
 
 export default function HomeSplitScreen() {
   return (
-    <Flex bgColor="black.100" overflow={"hidden"}>
+    <Flex className="Section__container" bgColor="black.100"
+    overflow='hidden'
+    >
       <Stack
         as={Container}
         height={"calc(100vh - 94px)"}
-        pt="140px"
-        // pb="150px"
+        // pt="140px"
         direction={{ base: "column", md: "row" }}
         pos="relative"
         className="larger"
@@ -69,9 +70,9 @@ export default function HomeSplitScreen() {
             color="white"
             pos="relative"
             zIndex={5}
-            height="412px"
+            // height="412px"
           >
-            <Heading fontSize="68px" lineHeight="76px" className="header-title">
+            <Heading fontSize="56px" lineHeight="68px">
               The quick brown fox jumps over the dog
             </Heading>
             <Text

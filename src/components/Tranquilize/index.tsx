@@ -15,16 +15,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import {
-  benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
   checkIcon,
-  iconFunctionalities1,
-  iconFunctionalities2,
-  iconFunctionalities3,
-  iconFunctionalities4,
-  iconFunctionalities5,
-  iconFunctionalities6,
   network,
 } from "../../assets/images";
 
@@ -51,6 +42,7 @@ const channelsSecondRow = [
 
 export default function Tranquilize() {
   return (
+    <Flex className='Section__container'>
     <Box as={Container}
     className='larger'
     >
@@ -128,5 +120,6 @@ export default function Tranquilize() {
         </Flex>
       </Stack>
     </Box>
+    </Flex>
   );
 }

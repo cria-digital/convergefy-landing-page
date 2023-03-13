@@ -19,6 +19,14 @@
   --titleWeight: var(--fontWeightBold);
   --bodyLineHeight: 1.555555556;
 
+  --scrollbarWidth: 17px;
+  --layoutWidthMax: 1080px;
+  --columnPaddingNormal: 16px;
+
+  --layoutWidth: var(--layoutWidthMax);
+
+  --windowWidth: calc(100vw - var(--scrollbarWidth));
+
   --titleFont: var(--titleWeight) var(--titleFontSize) / var(--titleLineHeight);
   --bodyFont: var(--fontWeightNormal) var(--bodyFontSize, 18px) /
     var(--bodyLineHeight, 1.555555556) var(--fontFamily);
@@ -29,18 +37,6 @@ body {
   font-family: "Circular Std", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.Section__container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  min-height: var(--sectionMinHeight);
-  max-width: 1080px;
-}
-.windowWidth {
-  max-width: 1080px;
 }
 
 p {
@@ -62,11 +58,24 @@ p {
   }
 }
 
+.larger {
+  max-width: var(--layoutWidth) !important;
+  margin: 0 var(--columnPaddingNormal) !important;
+}
+
+.Section__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  min-height: var(--sectionMinHeight);
+}
+
 @media screen and (min-width: 1441px) {
   .larger {
-    max-width: 1400px !important;
+    max-width: var(--layoutWidth);
   }
   .header-carrousel {
-    max-width: 1500px !important;
+    /* max-width: 1500px !important; */
   }
 }

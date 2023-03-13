@@ -28,6 +28,10 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
+    <Flex
+    className="Section__container"
+ 
+  >
     <Box as={Container} boxShadow="0px 0px 14px rgba(0, 0, 0, 0.08)"
     className="larger"
     >
@@ -81,6 +85,7 @@ export default function WithSubnavigation() {
         <MobileNav />
       </Collapse>
     </Box>
+    </Flex>
   );
 }
 
