@@ -154,23 +154,50 @@ export default function Footer() {
                 height={"2px"}
                 bgColor={"#C6D7F8"}
               />
+              <Stack spacing="24px">
+                <Flex height="28px" gap="18px">
+                  <Image src={footerIcon1} alt="location" />
 
-              <Flex height="28px" gap="18px">
-                <Image src={footerIcon1} alt="location" />
+                  <Flex
+                    color="white"
+                    opacity={0.8}
+                    height="28px"
+                    align="center"
+                    gap="8px"
+                  >
+                    <Text whiteSpace={"nowrap"}>Av, Loren ipson</Text>
+                    <Box
+                      minW="4px"
+                      w="4px"
+                      h="4px"
+                      bgColor={"#276CF8"}
+                      borderRadius={"full"}
+                    />
+                    <Text whiteSpace={"nowrap"}>Castilhos</Text>
+                    <Box
+                      minW="4px"
+                      w="4px"
+                      h="4px"
+                      bgColor={"#276CF8"}
+                      borderRadius={"full"}
+                    />
 
-                <Flex>
-                  <Text>Av, Loren ipson</Text>
-                  <Box
-                    minW="4px"
-                    w="4px"
-                    h="4px"
-                    bgColor={"#276CF8"}
-                    borderRadius={"full"}
-                  />
-                  <Text>Castilhos</Text>
-                  <Text>Castilhos</Text>
+                    <Text whiteSpace={"nowrap"}>São Paulo/SP</Text>
+                  </Flex>
                 </Flex>
-              </Flex>
+
+                <Flex height="28px" gap="18px" opacity={0.8}>
+                  <Image src={footerIcon2} alt="location" />
+
+                  <Text whiteSpace={"nowrap"}>convergefy@contato.com</Text>
+                </Flex>
+
+                <Flex height="28px" gap="18px" opacity={0.8}>
+                  <Image src={footerIcon3} alt="location" />
+
+                  <Text whiteSpace={"nowrap"}>(+55) 11 999-999-999</Text>
+                </Flex>
+              </Stack>
             </Box>
           </SimpleGrid>
           <Stack py={0} direction="row">
